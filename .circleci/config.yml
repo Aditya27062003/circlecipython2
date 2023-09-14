@@ -1,5 +1,4 @@
 version: 2.1
-#version for yml file
 
 jobs:
   build:
@@ -15,12 +14,12 @@ jobs:
     steps:
       - checkout
       - run: python tests.py
-  
+
   deploy:
     docker:
-    - image: cimg/python3.11
+      - image: cimg/python:3.11
     steps:
-    - run: echo "Deploying Successful!!!"
+      - run: echo "Deploying Successful."
 
 workflows:
   version: 2
@@ -33,4 +32,3 @@ workflows:
           filters:
             branches:
               only: main
-              
