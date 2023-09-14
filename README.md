@@ -1,1 +1,2 @@
-# circlecipython2
+python main.py
+python tests.py
